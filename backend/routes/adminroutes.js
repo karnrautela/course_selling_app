@@ -1,15 +1,22 @@
 const {Router} = require("express");
 const adminRouter = Router();
-courseRouter.post("/signup",(req,res)=>{
+const { adminModel } = require("../models/db");
+adminRouter.post("/signup",(req,res)=>{
+    res.json ({
+        message:"routes connected successfully"
+    })
+});
+adminRouter.post("/login",(req,res)=>{
 
 });
-courseRouter.post("/signin",(req,res)=>{
-
-});
-courseRouter.post("/createcourse",(req,res)=>{
+adminRouter.post("/createcourse",(req,res)=>{
 
 });
 
-courseRouter.post("/editcourse",(req,res)=>{
+adminRouter.post("/editcourse",(req,res)=>{
 
 });
+
+module.exports = {
+    adminRouter : adminRouter
+}
